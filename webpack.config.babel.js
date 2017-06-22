@@ -2,6 +2,7 @@
 
 import path from 'path'
 import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 import { WDS_PORT } from './src/shared/config'
 import { isProd } from './src/shared/util'
@@ -19,6 +20,16 @@ export default {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          loader: [
+            {
+              loader: 'css-loader',
+            },
+          ],
+        }),
+      },
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
     ],
   },
@@ -38,5 +49,9 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      allChunks: true,
+    }),
   ],
 }
