@@ -8,6 +8,7 @@ import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
+  MAP_PAGE_ROUTE,
   NOT_FOUND_DEMO_PAGE_ROUTE,
 } from '../routes'
 
@@ -28,6 +29,7 @@ const Nav = () => (
           { route: HOME_PAGE_ROUTE, label: 'Home' },
           { route: HELLO_PAGE_ROUTE, label: 'Say Hello' },
           { route: HELLO_ASYNC_PAGE_ROUTE, label: 'Say Hello Asynchronously' },
+          { route: MAP_PAGE_ROUTE, label: 'Awesome map with trains!' },
           { route: NOT_FOUND_DEMO_PAGE_ROUTE, label: '404 Demo' },
         ].map(link => (
           <li className="nav-item" key={link.route}>

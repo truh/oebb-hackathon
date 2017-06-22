@@ -11,11 +11,13 @@ import Nav from './component/nav'
 import HomePage from './component/page/home'
 import HelloPage from './component/page/hello'
 import HelloAsyncPage from './component/page/hello-async'
+import MapPage from './component/page/map'
 import NotFoundPage from './component/page/not-found'
 import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
+  MAP_PAGE_ROUTE,
 } from './routes'
 
 const App = () => (
@@ -27,6 +29,7 @@ const App = () => (
       <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
       <Route path={HELLO_PAGE_ROUTE} render={() => <HelloPage />} />
       <Route path={HELLO_ASYNC_PAGE_ROUTE} render={() => <HelloAsyncPage />} />
+      <Route path={MAP_PAGE_ROUTE} render={() => <MapPage />} />
       <Route component={NotFoundPage} />
     </Switch>
   </div>
