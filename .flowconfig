@@ -1,0 +1,9 @@
+[options]
+suppress_comment= \\(.\\|\n\\)*\\flow-disable-next-line
+
+[ignore]
+.*node_modules.*
+.*data.*
+.*dist.*
+.*\.tmp.*
+.*/node_modules/jss/.*
