@@ -3,10 +3,19 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import TrainMap from '../train-map'
+
 const title = 'Map Page'
 
-const HelloPage = () => (
-  <div className="container mt-4">
+const center = { lat: 59.95, lng: 30.33 }
+const zoom = 11
+
+const containerStyle = {
+  height: '300px',
+}
+
+const MapPage = () => (
+  <div className="container mt-4" style={containerStyle}>
     <Helmet
       title={title}
       meta={[
@@ -14,12 +23,8 @@ const HelloPage = () => (
         { property: 'og:title', content: title },
       ]}
     />
-    <div className="row">
-      <div className="col-12">
-        <h1>{title}</h1>
-      </div>
-    </div>
+    <TrainMap center={center} zoom={zoom} />
   </div>
 )
 
-export default HelloPage
+export default MapPage
