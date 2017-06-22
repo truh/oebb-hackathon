@@ -7,7 +7,7 @@ import TrainMap from '../train-map'
 
 const title = 'Map Page'
 
-const center = { lat: 59.95, lng: 30.33 }
+const center = { lat: 48.2, lng: 16.2 }
 const zoom = 11
 
 const containerStyle = {
