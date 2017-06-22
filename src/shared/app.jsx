@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
 
-import { APP_NAME } from './config'
+import { APP_NAME, STATIC_PATH } from './config'
 import Nav from './component/nav'
 import HomePage from './component/page/home'
 import HelloPage from './component/page/hello'
@@ -22,8 +22,9 @@ import {
 
 const App = () => (
   <div style={{ paddingTop: 54 }}>
-    <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
-    <h1>{APP_NAME}</h1>
+    <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME}>
+      <link rel={'stylesheet'} href={`${STATIC_PATH}/css/style.css`} />
+    </Helmet>
     <Nav />
     <Switch>
       <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />

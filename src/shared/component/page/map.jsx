@@ -11,11 +11,11 @@ const center = { lat: 59.95, lng: 30.33 }
 const zoom = 11
 
 const containerStyle = {
-  height: '300px',
+  height: '100%',
 }
 
 const MapPage = () => (
-  <div className="container mt-4" style={containerStyle}>
+  <div style={containerStyle}>
     <Helmet
       title={title}
       meta={[
