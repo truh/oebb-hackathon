@@ -25,6 +25,7 @@ const MapPage = () => (
     />
     <TrainMap center={center} zoom={zoom} />
   </div>
+  <div class="footer navbar-fixed-bottom">
 )
 
 export default MapPage
