@@ -31,7 +31,7 @@ const HomePage = () => (
           <h3 className="mb-3">JSS</h3>
           <p>Hover me.</p>
           <p>Resize the window.</p>
-          <button>Composition</button>
+          <button>Componentmposition</button>
         </div>
         <div className="col-md-4 mb-4">
           <h3 className="mb-3">Websockets</h3>
@@ -42,5 +42,6 @@ const HomePage = () => (
     <ModalExample />
   </div>
 )
+
 
 export default HomePage
