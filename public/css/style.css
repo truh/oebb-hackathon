@@ -14,6 +14,15 @@ body {
   height: 100%;
 }
 
+.gm-style {
+  height: 90%;
+}
+
 .train-marker {
   background-color: red;
+}
+
+.navbar-fixed-bottom {
+  width: 90%;
+  height: 10%;
 }
